@@ -34,6 +34,21 @@ console.log(lista)
 //lista.map( (e) =>console.log(e) ) ARROW FUNCTION
 
 
-// Skapa en funktion som tar 2 tal som argument och returnera summan av två talen
+// Övning 4 Skapa en funktion som tar 2 tal som argument och returnera summan av två talen
+
+function calculate(a,b){
+    //console.log(a+b)
+    return a+b
+}
+
 // 4.1) skriva ut summan i en div i html 
 
+//const div = document.querySelector(".addition");
+
+//div.textContent = calculate (2, 100)
+
+document.querySelector (".addition").textContent = calculate (50, 51)
+
+
+// Övning 5 Skapa en funktion expression som  tar en string som argument och skriver ut i consolen.
+//  * funktionen också returnera strängen. Spara trängen i en variabel. 
