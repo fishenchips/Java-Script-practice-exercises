@@ -94,3 +94,18 @@ document.querySelector("#remove").addEventListener("click", removeShopping)
 
 
 // Övning 8 Skapa en funktion som tar string som argument och returnera reverse/omvänd värde
+
+function reverseWord () {
+    var x = "Tottenham"
+    console.log(x.split("").reverse().join(""))
+}
+
+reverseWord()
+
+
+// Övning 9 Skapa en funktion som kan returnera true värde om ett ord är en palindrom och 
+//falsk värde om det inte är palindrom
+
+function palindrom () {
+    
+}
