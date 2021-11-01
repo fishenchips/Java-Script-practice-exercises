@@ -53,22 +53,37 @@ document.querySelector (".addition").textContent = calculate (50, 51)
 // Övning 5 Skapa en funktion expression som  tar en string som argument och skriver ut i consolen.
 //  * funktionen också returnera strängen. Spara trängen i en variabel. 
 
+const expressionFunction = function (a, b) {
+    console.log (a + b)
+    return a+b
+}
+
+expressionFunction ("Hej, ", "Du är snäll!");
+
 // Övning 6 Skapa en funktion som kan konvertera en string till en array 
 // till ex. var x = Rakib ska bli x= [R,a,k,i,b] 
 
-var x = "Rakib";
+/* var x = "Rakib";
 
-console.log(x.split(""))
+function split () {
+    console.log(x.split(""))
+}
+
+split() */
+
+function convertToArray (a) {
+    console.log(a.split(""))
+}
+
+convertToArray("Splitta")
+
+//ovan är återanvändbar kod, vi har inte begränsat oss till att använda en function
 
 //console.log(x.split("").reverse().join(""))
 
 
 //Övning 7 Skapa en Shopping List app med hjälp av DOM manipulering.  Användare kan lägga till shopping list 
 // och ta bort  items  från shopping list. tips: appendChild(), remove()
-
-
-
-
 
 function addToShopping(e) {
     e.preventDefault();
@@ -80,15 +95,16 @@ function addToShopping(e) {
     shoppingList.appendChild(newLi)
 } 
 
-
-//Trying to remove shopping list --- NOT WORKING
-function removeShopping (){ 
-    var div = document.getElementsByClassName("shopping-div");
-    div(remove);
-}
-
-// nedan behöver vara utanför? funkar inte om den är i funktionen (att console logga)
+// nedan behöver vara utanför? funkar inte om den är i funktionen (att console logga) FÖR ATT VI ANROPAR FUNCTIONEN!
 document.querySelector("#btn-shopping").addEventListener("click", addToShopping)
+
+// ta bort li - där div är parent. De tas bort en åt gången.
+function removeShopping (e){ 
+    e.preventDefault();
+    var div = document.querySelector(".shopping-div")
+    var li = document.querySelector("li");
+    div.removeChild(li)
+}
 
 document.querySelector("#remove").addEventListener("click", removeShopping)
 
@@ -98,14 +114,28 @@ document.querySelector("#remove").addEventListener("click", removeShopping)
 function reverseWord () {
     var x = "Tottenham"
     console.log(x.split("").reverse().join(""))
-}
 
+}
 reverseWord()
 
 
 // Övning 9 Skapa en funktion som kan returnera true värde om ett ord är en palindrom och 
 //falsk värde om det inte är palindrom
 
+const ord = "anna";
+
 function palindrom () {
-    
+   if (ord == ord.split("").reverse().join("")) {
+       console.log("ordet är en palindrom")
+   }
+   else {
+       console.log("ordet är inte en palindrom")
+   }
+   
 }
+
+palindrom()
+
+
+// Övning 10 Skapa en funktion som kan kan söka och ersätta och returnerar ersätt värdet . 
+// till ex . ReplaceFunktion(searchWord, ReplaceWord) kommer att returnera replaceWord 
