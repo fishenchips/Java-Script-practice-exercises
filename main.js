@@ -60,19 +60,30 @@ const expressionFunction = function (a, b) {
 
 expressionFunction ("Hej, ", "Du är snäll!");
 
+// const = returnedText = expressionFunction ("Hej, ", "Du är snäll")
+
+// kanske ute efter totalspending så skapar const1 = (200, 299) - const2 = (10, 15) osv
+// console.log(const1 + const2 + const3)
+
+
+
+
+
+
 // Övning 6 Skapa en funktion som kan konvertera en string till en array 
 // till ex. var x = Rakib ska bli x= [R,a,k,i,b] 
 
-/* var x = "Rakib";
+            /* var x = "Rakib";
 
-function split () {
-    console.log(x.split(""))
-}
+            function split () {
+                console.log(x.split(""))
+            }
 
-split() */
+            split() */
 
 function convertToArray (a) {
     console.log(a.split(""))
+    return a.split("")
 }
 
 convertToArray("Splitta")
@@ -111,20 +122,28 @@ document.querySelector("#remove").addEventListener("click", removeShopping)
 
 // Övning 8 Skapa en funktion som tar string som argument och returnera reverse/omvänd värde
 
-function reverseWord () {
+/* function reverseWord () {
     var x = "Tottenham"
     console.log(x.split("").reverse().join(""))
 
 }
-reverseWord()
+reverseWord() */
 
+
+function reverseWord1 (word) {
+   // console.log(word.split("").reverse().join(""))
+    return word.split("").reverse().join("")
+}
+
+const newWord = reverseWord1 ("Svenska")
+
+console.log(newWord)
 
 // Övning 9 Skapa en funktion som kan returnera true värde om ett ord är en palindrom och 
 //falsk värde om det inte är palindrom
 
-const ord = "anna";
 
-function palindrom () {
+function palindrom (ord) {
    if (ord == ord.split("").reverse().join("")) {
        console.log("ordet är en palindrom")
    }
@@ -134,8 +153,18 @@ function palindrom () {
    
 }
 
-palindrom()
+palindrom("anna")
+
+palindrom("hej")
 
 
 // Övning 10 Skapa en funktion som kan kan söka och ersätta och returnerar ersätt värdet . 
 // till ex . ReplaceFunktion(searchWord, ReplaceWord) kommer att returnera replaceWord 
+
+
+// 2 argument searchword, replace word, text  var text = "something something dark side"
+
+// replaceFunction("something", "someothersthing" "something something dark side")
+
+// return "someotherthing someotherthing darkside"
+
